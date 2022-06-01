@@ -153,7 +153,7 @@
     flex-wrap: wrap;
     font-weight: bolder;
 }
-
+ 
 .empty,
 .toggled {
     width: fit-content;

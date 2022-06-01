@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.clock_container {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px
+}
+/* start analog clock */
+.clock_circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 3px solid red;
+    position: relative;
+    margin-bottom: 20px
+}
+
+.clock_circle::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.num {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.one {
+    transform: rotate(30deg);
+}
+
+.two {
+    transform: rotate(60deg);
+}
+
+.three {
+    transform: rotate(90deg);
+}
+
+.four {
+    transform: rotate(120deg);
+}
+
+.five {
+    transform: rotate(150deg);
+}
+
+.six {
+    transform: rotate(180deg);
+}
+
+.seven {
+    transform: rotate(210deg);
+}
+
+.eight {
+    transform: rotate(240deg);
+}
+
+.nine {
+    transform: rotate(270deg);
+}
+
+.ten {
+    transform: rotate(300deg);
+}
+
+.eleven {
+    transform: rotate(330deg);
+}
+
+.twelve {
+    transform: rotate(360deg);
+}
+
+.hour_hand {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 8px;
+    height: 30%;
+    background-color: black;
+    transform-origin: center bottom;
+}
+
+.minute_hand {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    width: 4px;
+    height: 39%;
+    background-color: red;
+    transform-origin: center bottom;
+}
+
+.second_hand {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 2px;
+    height: 40%;
+    background-color: blue;
+    transform-origin: center bottom;
+}
+/* end analog clock */
+/* start digital clock */
+.digial_clock {
+    height: 45px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: gray;
+
+    border: 2px solid red;
+    border-radius: 20px;
+}
+
+.hour,
+.minutes,
+.seconds,
+.ampm {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bolder;
+}
+
+.empty,
+.toggled {
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.show {
+    visibility: hidden;
+}
